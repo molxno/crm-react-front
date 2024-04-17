@@ -14,9 +14,8 @@ function Clientes() {
     <>
       <h1 className="font-black text-4xl text-slate-800">Clientes</h1>
       <p className="mt-3 ">
-        Administra y gestiona la información de tus clientes.
+        Administra y gestiona la información de clientes.
       </p>
-      <BackButton route={"/"} text={"Volver al inicio"}/>
       {isFilledArray(clientes) ? (
         <>
           <table className="w-full bg-white shadow mt-5 table-auto">

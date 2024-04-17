@@ -41,7 +41,7 @@ function ClienteNuevo() {
       <p className="mt-3 ">
         Completa el formulario para registrar un nuevo cliente.
       </p>
-      <BackButton route={"/"} text={"Volver al inicio"} />
+      <BackButton route={"/clientes"} text={"Volver"} />
       <div className="bg-white rounded-md shadow md:w-3/4 mx-auto px-5 py-10 mt-5">
         {errores && (
           <>
