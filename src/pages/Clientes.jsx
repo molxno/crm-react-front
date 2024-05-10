@@ -1,8 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { isFilledArray } from "../utils/functions";
 import Cliente from "../components/Cliente";
-import {ApiGetAll} from "../utils/functions";
-import BackButton from "../components/BackButton";
+import { ApiGetAll } from "../utils/functions";
 
 export const loader = () => {
   return ApiGetAll("/clientes");
@@ -13,26 +12,26 @@ function Clientes() {
   return (
     <>
       <h1 className="font-black text-4xl text-slate-800">Clientes</h1>
-      <p className="mt-3 ">
-        Administra y gestiona la información de clientes.
-      </p>
+      <p className="mt-3 ">Administra y gestiona la información de clientes.</p>
       {isFilledArray(clientes) ? (
         <>
-          <table className="w-full bg-white shadow mt-5 table-auto">
-            <thead className="bg-slate-800 text-white">
-              <tr>
-                <th className="p-2 w-1/4">Cliente</th>
-                <th className="p-2">Contacto</th>
-                <th className="p-2">Notas</th>
-                <th className="p-2">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {clientes.map((cliente) => (
-                <Cliente children={cliente} key={cliente.id} />
-              ))}
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white shadow mt-5 table-auto min-w-max">
+              <thead className="bg-slate-800 text-white">
+                <tr>
+                  <th className="p-2">Cliente</th>
+                  <th className="p-2">Contacto</th>
+                  <th className="p-2">Notas</th>
+                  <th className="p-2">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientes.map((cliente) => (
+                  <Cliente children={cliente} key={cliente.id} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </>
       ) : (
         <>

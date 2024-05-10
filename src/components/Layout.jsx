@@ -34,7 +34,7 @@ function Layout() {
             Nuevo Cliente
           </NavLink>
         </nav>
-        <div className="text-center">
+        <div className="text-center p-8">
           <p className="text-sm text-gray-400">&copy; molxno.dev</p>
           <p className="text-sm text-gray-400">
             Property of a Backend Magician.
