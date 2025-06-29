@@ -47,7 +47,7 @@ function Layout() {
 
         <div className="text-center p-8 relative z-10">
           <p className="text-sm text-white">&copy; molxno.dev</p>
-          <p className="text-sm text-white">Property of a Backend wizard.</p>
+          <p className="text-sm text-white">Property of a Backend Wizard.</p>
           <p className="text-sm text-white">Made with ❤️</p>
         </div>
       </aside>
